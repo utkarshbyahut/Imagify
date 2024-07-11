@@ -1,6 +1,6 @@
 from PIL import Image
 
-def compress_image(input_path, output_path, output_quality):
+def compress_image():
     
     '''
    
@@ -12,9 +12,15 @@ def compress_image(input_path, output_path, output_quality):
         quality: The compression quality (0-100).
    
     '''
-    
-    print("\n", "IP:", input_path, "OP:", output_path, "OQ:", output_quality, "\n")
-    
-    img = Image.open(input_path)
-    img.save(output_path, optimize = True, quality = int(output_quality))
+    inputPath      =    input("Enter Local Path to the Input Image        : ")
+    outputPath     =    input("Enter Output Path for the Image            : ")
+    outputQuality  =    input("Enter Desired Quality of the Image (0-100) : ")
+
+    print("\n", "IP:", inputPath, "OP:", outputPath, "OQ:", outputQuality, "\n")
+        
+    img = Image.open(inputPath)
+    img.save(outputPath, optimize = True, quality = int(outputQuality))
+
+def exitFunction():
+    print("\n", "See you soon! Bye Bye!", "\n")
 

@@ -2,20 +2,19 @@ from PIL import Image
 import functions
 
 while True:
-    print("\n", "| 1- Compress Image | 2- Quit | ", "\n")
+    print("\n", "| 1- Compress Image | 2- Quit | 3- Get Colours | ", "\n")
     userChoice = int(input("What action would you like to perform? : "))
     
     if (userChoice ==   1):     
-        inputPath      =    input("Enter Local Path to the Input Image        : ")
-        outputPath     =    input("Enter Output Path for the Image            : ")
-        outputQuality  =    input("Enter Desired Quality of the Image (0-100) : ")
-
-        functions.compress_image(inputPath, outputPath, outputQuality)
+        functions.compress_image()
 
     elif (userChoice == 2):
-        print("\n", "See you soon! Bye Bye!", "\n")
+        functions.exitFunction()
         break
-
+'''
+    elif (userChoice == 3):
+        functions.getpalette()
+'''
     else:
         print("Oh no! Invalid Input! Try Again :) \n")
 
