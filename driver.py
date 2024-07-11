@@ -11,10 +11,10 @@ while True:
     elif (userChoice == 2):
         functions.exitFunction()
         break
-'''
-    elif (userChoice == 3):
-        functions.getpalette()
-'''
+
+#    elif (userChoice == 3):
+#        functions.getpalette()
+
     else:
         print("Oh no! Invalid Input! Try Again :) \n")
 
